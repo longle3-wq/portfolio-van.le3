@@ -12309,7 +12309,7 @@ body.tp-magic-cursor #magic-cursor {
 .tp-hero-2-subtitle {
   font-weight: 400;
   font-size: 46px;
-  line-height: 0.87;
+  line-height: 1;
   margin-bottom: 10px;
   display: inline-block;
   letter-spacing: 0.01em;

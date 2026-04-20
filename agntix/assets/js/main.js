@@ -106,7 +106,11 @@
 	
 	// 01. PreLoader Js//
 	$(window).on('load', function () {
-		$("#preloader").fadeOut(500);
+		var navStart = (performance.timing && performance.timing.navigationStart) || Date.now();
+		var elapsed = Date.now() - navStart;
+		var minMs = 7000;
+		var remaining = Math.max(0, minMs - elapsed);
+		setTimeout(function () { $("#preloader").fadeOut(500); }, remaining);
 	});
 	$(window).on('load', function () {
 		$("#loading").fadeOut(500);

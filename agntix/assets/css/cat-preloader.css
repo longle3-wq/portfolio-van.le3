@@ -1,6 +1,6 @@
 /* Cat preloader - adapted from https://codepen.io/eyesight/pen/WLGaJK */
 #preloader {
-  background-color: #E4E5E6;
+  background-color: #0A0A0A;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,7 +20,7 @@
 #preloader .cat {
   width: 80%;
   overflow: visible;
-  fill: #004466;
+  fill: #FB4566;
 }
 #preloader .eyes circle {
   fill: #fff;
@@ -30,6 +30,6 @@
   margin-left: -25px;
   font-size: 45px;
   font-family: 'Delius Swash Caps', cursive, sans-serif;
-  color: #004466;
+  color: #FB4566;
   white-space: nowrap;
 }

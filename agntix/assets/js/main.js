@@ -108,7 +108,7 @@
 	$(window).on('load', function () {
 		var navStart = (performance.timing && performance.timing.navigationStart) || Date.now();
 		var elapsed = Date.now() - navStart;
-		var minMs = 7000;
+		var minMs = 4000;
 		var remaining = Math.max(0, minMs - elapsed);
 		setTimeout(function () { $("#preloader").fadeOut(500); }, remaining);
 	});

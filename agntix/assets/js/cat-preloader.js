@@ -41,8 +41,8 @@
       resetit();
       var tl = new TimelineMax({ delay: 0.5, onComplete: initAni });
       var tl_eye = new TimelineMax({ delay: 1.5, repeat: 3, repeatDelay: 1 });
-      tl.timeScale(1);
-      tl_eye.timeScale(1);
+      tl.timeScale(2);
+      tl_eye.timeScale(2);
 
       tl.to([head, eyes, ears], 0.2, { y: 45, x: 30 })
         .addLabel('twink')

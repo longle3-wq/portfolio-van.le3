@@ -747,12 +747,15 @@
 		if ($('.moving-text').length > 0) {
 			gsap.utils.toArray('.moving-text').forEach((section, index) => {
 				const w = section.querySelector('.wrapper-text');
-				const [x, xEnd] = (index % 2) ? [(section.offsetWidth - w.scrollWidth), 0] : [0, section.offsetWidth - w.scrollWidth];
+				const travel = (section.offsetWidth - w.scrollWidth) / 4;
+				const [x, xEnd] = (index % 2) ? [travel, 0] : [0, travel];
 				gsap.fromTo(w, { x }, {
 					x: xEnd,
 					scrollTrigger: {
 						trigger: section,
-						scrub: 0.1,
+						scrub: 2,
+						start: 'top bottom',
+						end: 'bottom top',
 					}
 				});
 			});

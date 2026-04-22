@@ -39,7 +39,7 @@
 
     function initAni() {
       resetit();
-      var tl = new TimelineMax({ delay: 0.5, onComplete: initAni });
+      var tl = new TimelineMax({ delay: 0.5, onComplete: function () { window.__catAnimCompleted = true; } });
       var tl_eye = new TimelineMax({ delay: 1.5, repeat: 3, repeatDelay: 1 });
       tl.timeScale(2);
       tl_eye.timeScale(2);

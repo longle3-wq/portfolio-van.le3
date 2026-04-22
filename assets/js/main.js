@@ -110,7 +110,12 @@
 		var elapsed = Date.now() - navStart;
 		var minMs = 4000;
 		var remaining = Math.max(0, minMs - elapsed);
-		setTimeout(function () { $("#preloader").fadeOut(500); }, remaining);
+		function doFade() { $("#preloader").fadeOut(500); }
+		function waitForCat() {
+			if (window.__catAnimCompleted || typeof TimelineMax === 'undefined') { doFade(); }
+			else { setTimeout(waitForCat, 100); }
+		}
+		setTimeout(waitForCat, remaining);
 	});
 	$(window).on('load', function () {
 		$("#loading").fadeOut(500);

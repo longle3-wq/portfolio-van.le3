@@ -29,7 +29,40 @@
   align-self: flex-end;
   margin-left: -25px;
   font-size: 45px;
-  font-family: 'Delius Swash Caps', cursive, sans-serif;
+  font-family: var(--tp-ff-mango), 'MangoGrotesque', serif;
   color: #FB4566;
   white-space: nowrap;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  #preloader .cat-wrapper {
+    width: 220px;
+  }
+  #preloader .logoani {
+    font-size: 32px;
+    margin-left: -18px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  #preloader .cat-wrapper {
+    width: 160px;
+  }
+  #preloader .logoani {
+    font-size: 24px;
+    margin-left: -12px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  #preloader .cat-wrapper {
+    width: 130px;
+  }
+  #preloader .logoani {
+    font-size: 20px;
+    margin-left: -10px;
+  }
 }
